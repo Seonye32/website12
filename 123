@@ -1,0 +1,34 @@
+# %% 클래스(Class) 예제 #6
+
+class arithmetics:
+    number = 0
+
+    def __init__(self, initial_value):
+        self.number = initial_value
+
+    def add(self, n):
+        self.number += n
+    def sub(self, n):
+        self.number -= n
+    def mul(self, n):
+        self.number *= n
+    def div(self, n):
+        if n != 0:
+            self.number /= n
+        else:
+            print("Cannot divide by 0")
+
+    def get_current_value(self):
+        return self.number
+    
+mynum = arithmetics(10)
+print(mynum.get_current_value())
+
+mynum.add(10)
+print(mynum.get_current_value())
+
+mynum.mul(0.1)
+print(mynum.get_current_value())
+
+mynum.div(0)
+print(mynum.get_current_value())
